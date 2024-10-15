@@ -23,4 +23,4 @@ Using react flow, we built 3 custom nodes with different states :
 - NotepadNode with a textarea. This node can use the states of the counter and color picker but cannot share its state.
 
 When a notepad is linked to a counter the size of the text with be updated according to the value of that counter.
-When a notepad is linked to a color picker, the background color of the notepad with be updated according to the value of that counter.
+When a notepad is linked to a color picker, the background color of the notepad with be updated according to the value of that color picker.
