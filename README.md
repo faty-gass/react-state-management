@@ -8,7 +8,7 @@ After cloning the repo, you should install the dependencies
 yarn install
 ```
 
-then you can lauch the project
+then you can launch the project
 
 ```bash
 yarn dev

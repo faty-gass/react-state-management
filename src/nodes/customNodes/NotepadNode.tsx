@@ -14,13 +14,14 @@ export function NotepadNode({ data }: NodeProps<NotepadNode>) {
   const dispatch = useDispatch();
   const [textColor, setTextColor] = useState<string>("#ffffff");
   const [textSize, setTextSize] = useState<number>(12);
+  const edges = useSelector((state: RootState) => state.flow.edges);
+  const nodes = useSelector((state: RootState) => state.flow.nodes);
 
   const nodeId = useMemo(() => {
     const splittedLabel = data.label.split("_");
     return splittedLabel[1];
   }, [data.label]);
-  const edges = useSelector((state: RootState) => state.flow.edges);
-  const nodes = useSelector((state: RootState) => state.flow.nodes);
+
   const linkedNodesIds = edges
     .filter((edge) => edge.target === nodeId)
     .map((edge) => edge.source);
